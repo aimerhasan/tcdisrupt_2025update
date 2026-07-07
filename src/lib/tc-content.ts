@@ -36,12 +36,17 @@ export const SITE_STYLE = `
                 height: 600px;
             }
         }
-        .team-image, .speaker-image, .disrupt-gallery-image, .testimonial-image {
-            object-fit: cover;
-            object-position: center;
-            height: 100%;
-            width: 100%;
-        }
+       .team-image, .speaker-image, .testimonial-image {
+    object-fit: cover;
+    object-position: center;
+}
+
+.disrupt-gallery-image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
         .advantage-carousel-image {
              height: 200px;
         }
@@ -158,7 +163,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                         <div id="advantage-carousel-track" class="flex transition-transform duration-700 ease-in-out">
                              <img src="https://techcrunch.com/wp-content/uploads/2024/10/Networking_disrupt.png?w=680" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
                              <img src="https://www.cnet.com/a/img/resize/388f93a1c65028d2df9fd645e986666c86e6d94f/hub/2012/09/10/fdf4b7cf-f0e5-11e2-8c7c-d4ae52e62bcc/disrupt2012-9518.jpg?auto=webp&width=1200" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
-                             <img src="https://techcrunch.com/wp-content/uploads/2019/03/showcase-stage-disrupt.jpg?w=680" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
+                             <img src=".output/public/Images/AV-53.jpg?w=680" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
                         </div>
                     </div>
                 </div>
@@ -256,10 +261,10 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-extrabold text-center text-gray-900">From Founders Like You</h2>
                 <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-16 w-16 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-4 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-sm text-gray-500">TrustExam</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-16 w-16 rounded-full testimonial-image" src="Images/Yevgeniya Yussupova CEO of NIET.jpg" alt="Yevgeniya Yussupova"><p class="mt-4 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-16 w-16 rounded-full testimonial-image" src="Images/Sherie Spence.jpg" alt="Sherie Spence"><p class="mt-4 font-bold text-gray-900">Sherie Spence</p><p class="text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-16 w-16 rounded-full testimonial-image" src="Images/Ardak Akhmetova.jpg" alt="Ardak Akhmetova"><p class="mt-4 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-sm text-gray-500">Global Grand University</p></div></div>
+                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-4 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-sm text-gray-500">TrustExam</p></div></div>
+                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="Images/Yevgeniya Yussupova CEO of NIET.jpg" alt="Yevgeniya Yussupova"><p class="mt-4 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
+                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="Images/Sherie Spence.jpg" alt="Sherie Spence"><p class="mt-4 font-bold text-gray-900">Sherie Spence</p><p class="text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
+                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="Images/Ardak Akhmetova.jpg" alt="Ardak Akhmetova"><p class="mt-4 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-sm text-gray-500">Global Grand University</p></div></div>
                 </div>
             </div>
         </section>
@@ -301,12 +306,12 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     <p class="mt-4 text-lg text-slate-600">Learn from the brightest minds in tech.</p>
                 </div>
                <div class="mt-12 grid gap-x-6 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-20 h-20 rounded-full mx-auto speaker-image" src="Images/Nikhil-Chandhok-e1782400490547.webp?w=300" alt="Nikhil Chandhok"><h3 class="mt-6 font-bold text-slate-900">Nikhil Chandhok</h3><p class="mt-1 text-sm text-slate-500">Chief Product & Technology Officer, Circle</p></div>
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-20 h-20 rounded-full mx-auto speaker-image" src="Images/Arvind-Jain-Glean.webp?w=300" alt="Arvind Jain"><h3 class="mt-6 font-bold text-slate-900">Arvind Jain</h3><p class="mt-1 text-sm text-slate-500"> Founder and CEO, Glean</p></div>
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-20 h-20 rounded-full mx-auto speaker-image" src="Images/Jeff_Color-1000-e1778078607521.webp?w=300" alt="Jeff Lawson"><h3 class="mt-6 font-bold text-slate-900">Jeff Lawson</h3><p class="mt-1 text-sm text-slate-500">Co-Founder, Twilio</p></div>
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-20 h-20 rounded-full mx-auto speaker-image" src="Images/Ryan Meadows.webp?w=300" alt="Ryan Meadows"><h3 class="mt-6 font-bold text-slate-900">Ryan Meadows</h3><p class="mt-1 text-sm text-slate-500">Chief Revenue Officer, Loveable</p></div>
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-20 h-20 rounded-full mx-auto speaker-image" src="Images/Robby-headshot.webp?w=300" alt="Robby Stein"><h3 class="mt-6 font-bold text-slate-900">Robby Stein</h3><p class="mt-1 text-sm text-slate-500">Vice President of Product, Google Search, Google</p></div>
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-20 h-20 rounded-full mx-auto speaker-image" src="Images/headshot-arsalan-tavakoli-e1777576150816.webp?w=300" alt="Arsalan Tavakoli-Shiraji"><h3 class="mt-6 font-bold text-slate-900">Arsalan Tavakoli-Shiraji</h3><p class="mt-1 text-sm text-slate-500">Co-founder and SVP of Field Engineering, Databricks</p></div>
+                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Nikhil-Chandhok-e1782400490547.webp?w=300" alt="Nikhil Chandhok"><h3 class="mt-6 font-bold text-slate-900">Nikhil Chandhok</h3><p class="mt-1 text-sm text-slate-500">Chief Product & Technology Officer, Circle</p></div>
+                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Arvind-Jain-Glean.webp?w=300" alt="Arvind Jain"><h3 class="mt-6 font-bold text-slate-900">Arvind Jain</h3><p class="mt-1 text-sm text-slate-500"> Founder and CEO, Glean</p></div>
+                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Jeff_Color-1000-e1778078607521.webp?w=300" alt="Jeff Lawson"><h3 class="mt-6 font-bold text-slate-900">Jeff Lawson</h3><p class="mt-1 text-sm text-slate-500">Co-Founder, Twilio</p></div>
+                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Ryan Meadows.webp?w=300" alt="Ryan Meadows"><h3 class="mt-6 font-bold text-slate-900">Ryan Meadows</h3><p class="mt-1 text-sm text-slate-500">Chief Revenue Officer, Loveable</p></div>
+                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Robby-headshot.webp?w=300" alt="Robby Stein"><h3 class="mt-6 font-bold text-slate-900">Robby Stein</h3><p class="mt-1 text-sm text-slate-500">Vice President of Product, Google Search, Google</p></div>
+                    <div class="speaker-card text-center p-4 rounded-lg min-h-[240px] flex flex-col items-center"><img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/headshot-arsalan-tavakoli-e1777576150816.webp?w=300" alt="Arsalan Tavakoli-Shiraji"><h3 class="mt-6 font-bold text-slate-900">Arsalan Tavakoli-Shiraji</h3><p class="mt-1 text-sm text-slate-500">Co-founder and SVP of Field Engineering, Databricks</p></div>
                 </div>
                  <div class="mt-20 text-center">
                     <a href="https://techcrunch.com/events/techcrunch-disrupt/speakers/" target="_blank" class="cta-button inline-block bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-3 px-8 rounded-lg text-lg">See Full Speaker List</a>
