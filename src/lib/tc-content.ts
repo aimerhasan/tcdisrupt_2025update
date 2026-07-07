@@ -163,7 +163,6 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                         <div id="advantage-carousel-track" class="flex transition-transform duration-700 ease-in-out">
                              <img src="https://techcrunch.com/wp-content/uploads/2024/10/Networking_disrupt.png?w=680" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
                              <img src="https://www.cnet.com/a/img/resize/388f93a1c65028d2df9fd645e986666c86e6d94f/hub/2012/09/10/fdf4b7cf-f0e5-11e2-8c7c-d4ae52e62bcc/disrupt2012-9518.jpg?auto=webp&width=1200" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
-                             <img src=".output/public/Images/AV-53.jpg?w=680" class="w-full flex-shrink-0 object-cover advantage-carousel-image">
                         </div>
                     </div>
                 </div>
