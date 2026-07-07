@@ -213,7 +213,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     <p class="mt-4 text-lg text-slate-600">Join a growing list of successful startups who have been part of our pavilion.</p>
                 </div>
                 <div class="mt-8">
-                    <img src="public/Images/tcdisrupt_previous final.png" alt="2024 Startup Alumni Logos" class="mx-auto">
+                    <img src="/Images/tcdisrupt_previous final.png" alt="2024 Startup Alumni Logos" class="mx-auto">
                 </div>
             </div>
         </section>
@@ -245,7 +245,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                         <div id="carousel-track" class="flex will-change-transform">
                             <img src="https://utfs.io/f/5lAbzPMR2hDEUjmC5jz9LRkGWyeHz5AxTpqYvnD8iEJtwXSb" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                             <img src="https://utfs.io/f/5lAbzPMR2hDEfs9w9N7NoUEalmMtCjcDxWuG2AyKg4veH0hV" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                            <img src="Images/AV-33.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
+                            <img src="/Images/AV-33.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                             <img src="https://techcrunch.com/wp-content/uploads/2024/10/54104332775_ab862e88d9_o.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                             <img src="https://utfs.io/f/5lAbzPMR2hDEWjzLd9x3ny7kJ4wRfb1vAVrTxHM5gWYNtiej" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                         </div>
