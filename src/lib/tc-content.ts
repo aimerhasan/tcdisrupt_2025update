@@ -57,7 +57,7 @@ export const SITE_STYLE = `
     box-shadow:0 0 16px rgba(34,197,94,.25);
     transform:scale(1.03);
 }   
-}
+
 
 .linkedin-btn{
     display:inline-flex;
