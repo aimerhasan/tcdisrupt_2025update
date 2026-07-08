@@ -173,7 +173,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
     <div class="absolute inset-0">
         <img
-            src="public/Images/AV-3 (2).jpg"
+            src="/Images/AV-3 (2).jpg"
             alt="TechCrunch Disrupt"
             class="w-full h-full object-cover"
         />
@@ -215,7 +215,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="https://techcrunch.com/wp-content/uploads/2024/06/stage_1200x600.png?w=680" alt="TechCrunch Disrupt Stage"></div>
                     <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="https://utfs.io/f/5lAbzPMR2hDETv8V80D0khqMSHFVgYoZ4pRfjULiCsW7Tz9E" alt="TechCrunch Disrupt Audience"></div>
-                    <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="public/Images/AV-27.jpg?w=563" alt="TechCrunch Disrupt Startup Alley"></div>
+                    <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="/Images/AV-27.jpg?w=563" alt="TechCrunch Disrupt Startup Alley"></div>
                 </div>
             </div>
         </section>
@@ -508,7 +508,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <!-- Background -->
     <div class="absolute inset-0">
         <img
-            src="public/Images/AV-47.jpg"
+            src="/Images/AV-47.jpg"
             alt="Silkroad Pavilion"
             class="w-full h-full object-cover">
 
@@ -649,7 +649,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                             <img src="https://utfs.io/f/5lAbzPMR2hDEfs9w9N7NoUEalmMtCjcDxWuG2AyKg4veH0hV" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                             <img src="/Images/AV-33.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                             <img src="https://techcrunch.com/wp-content/uploads/2024/10/54104332775_ab862e88d9_o.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                            <img src="public/Images/AV-23 (1).jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
+                            <img src="/Images/AV-23 (1).jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
                         </div>
                     </div>
                     <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 focus:outline-none z-10" aria-label="Previous image"><span class="text-2xl">❮</span></button>
