@@ -17,6 +17,16 @@ export const SITE_STYLE = `
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
         }
+        .mobile-menu-panel {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height .35s ease, opacity .25s ease;
+        }
+        .mobile-menu-panel.mobile-menu-open {
+            max-height: 28rem;
+            opacity: 1;
+        }
         .testimonial-card, .team-card, .speaker-card {
             background-color: white;
             border: 1px solid #e2e8f0; /* slate-200 */
@@ -29,12 +39,27 @@ export const SITE_STYLE = `
             100%  {opacity: 1; transform: translateY(0)}
         }
         .carousel-image {
+            position: relative;
             height: 300px;
         }
         @media (min-width: 768px) {
             .carousel-image {
                 height: 600px;
             }
+        }
+        .carousel-slide {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            transition: opacity .8s ease-in-out;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+            z-index: 1;
         }
      .team-image,
 .speaker-image,
@@ -107,24 +132,27 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     </div>
                 </div>
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
+                    <button id="mobile-menu-button" aria-expanded="false" aria-controls="mobile-menu" class="inline-flex items-center justify-center p-2 rounded-md text-slate-400 hover:text-slate-500 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-accent">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <svg id="menu-icon-open" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="menu-icon-close" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
             </div>
         </nav>
-        <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="#about-disrupt" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">About Disrupt</a>
-                <a href="#offer" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">The Offer</a>
-                <a href="#eligibility" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Eligibility</a>
-                <a href="#value" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Previous Participants</a>
-                <a href="#track-record" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Our Record</a>
-                <a href="#team" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-3 py-2 rounded-md text-base font-medium">Team</a>
+        <!-- Mobile menu, animated open/close based on menu state. -->
+        <div class="md:hidden mobile-menu-panel border-t border-slate-100" id="mobile-menu">
+            <div class="px-3 pt-3 pb-4 space-y-1.5">
+                <a href="#about-disrupt" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-4 py-3.5 rounded-md text-base font-medium">About Disrupt</a>
+                <a href="#offer" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-4 py-3.5 rounded-md text-base font-medium">The Offer</a>
+                <a href="#eligibility" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-4 py-3.5 rounded-md text-base font-medium">Eligibility</a>
+                <a href="#value" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-4 py-3.5 rounded-md text-base font-medium">Previous Participants</a>
+                <a href="#track-record" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-4 py-3.5 rounded-md text-base font-medium">Our Record</a>
+                <a href="#team" class="mobile-menu-link text-slate-600 hover:bg-slate-50 hover:text-accent block px-4 py-3.5 rounded-md text-base font-medium">Team</a>
             </div>
         </div>
     </header>
@@ -135,7 +163,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
     <div class="absolute inset-0">
         <img
-            src="/Images/AV-3 (2).jpg"
+            src="/Images/AV-58.webp"
             alt="TechCrunch Disrupt"
             class="w-full h-full object-cover"
         />
@@ -168,7 +196,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         <section id="about-disrupt" class="py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">What is TechCrunch Disrupt?</h2>
+                    <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">What is TechCrunch Disrupt?</h2>
                     <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">TechCrunch Disrupt is the #1 annual technology conference in the world. It brings together the most innovative startups, influential investors, and tech enthusiasts for three days of networking, learning, and pitching on the global stage.</p>
                      <div class="mt-6">
                          <a href="https://techcrunch.com/events/tc-disrupt-2025/" target="_blank" class="text-accent font-semibold hover:underline">Learn More →</a>
@@ -177,7 +205,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="https://techcrunch.com/wp-content/uploads/2024/06/stage_1200x600.png?w=680" alt="TechCrunch Disrupt Stage"></div>
                     <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="https://utfs.io/f/5lAbzPMR2hDETv8V80D0khqMSHFVgYoZ4pRfjULiCsW7Tz9E" alt="TechCrunch Disrupt Audience"></div>
-                    <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="/Images/AV-27.jpg?w=563" alt="TechCrunch Disrupt Startup Alley"></div>
+                    <div class="aspect-w-16 aspect-h-9"><img class="rounded-lg shadow-xl disrupt-gallery-image" src="/Images/AV-27.webp" alt="TechCrunch Disrupt Startup Alley"></div>
                 </div>
             </div>
         </section>
@@ -188,7 +216,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 
             <div>
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                     Who Can Apply?
                 </h2>
 
@@ -456,7 +484,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <!-- Background -->
     <div class="absolute inset-0">
         <img
-            src="/Images/AV-47.jpg"
+            src="/Images/AV-47.webp"
             alt="Silkroad Pavilion"
             class="w-full h-full object-cover">
 
@@ -573,7 +601,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         <section id="track-record" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Proven Track Record at Disrupt</h2>
+                    <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Proven Track Record at Disrupt</h2>
                     <p class="mt-4 text-lg text-slate-600">We have a history of bringing the biggest and best cohorts to the conference.</p>
                 </div>
                 <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
@@ -589,17 +617,15 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         <!-- Section 9: Gallery & Carousel -->
         <section id="gallery" class="py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-extrabold text-center text-gray-900">See the Action</h2>
+                <h2 class="text-4xl sm:text-3xl font-extrabold text-center text-gray-900">See the Action</h2>
                 <p class="mt-4 text-xl text-center text-gray-600">Experience the energy of the pavilion and the conference floor.</p>
                 <div class="mt-12 relative">
-                    <div id="carousel-container" class="overflow-hidden rounded-lg shadow-2xl">
-                        <div id="carousel-track" class="flex will-change-transform">
-                            <img src="https://utfs.io/f/5lAbzPMR2hDEUjmC5jz9LRkGWyeHz5AxTpqYvnD8iEJtwXSb" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                            <img src="https://utfs.io/f/5lAbzPMR2hDEfs9w9N7NoUEalmMtCjcDxWuG2AyKg4veH0hV" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                            <img src="/Images/AV-33.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                            <img src="https://techcrunch.com/wp-content/uploads/2024/10/54104332775_ab862e88d9_o.jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                            <img src="/Images/AV-23 (1).jpg" class="w-auto h-full flex-shrink-0 object-cover carousel-image">
-                        </div>
+                    <div id="carousel-container" class="overflow-hidden rounded-lg shadow-2xl carousel-image">
+                        <img src="https://utfs.io/f/5lAbzPMR2hDEUjmC5jz9LRkGWyeHz5AxTpqYvnD8iEJtwXSb" class="carousel-slide active" alt="TechCrunch Disrupt pavilion photo 1">
+                        <img src="https://utfs.io/f/5lAbzPMR2hDEfs9w9N7NoUEalmMtCjcDxWuG2AyKg4veH0hV" class="carousel-slide" alt="TechCrunch Disrupt pavilion photo 2">
+                        <img src="/Images/AV-33.webp" class="carousel-slide" alt="TechCrunch Disrupt pavilion photo 3">
+                        <img src="https://techcrunch.com/wp-content/uploads/2024/10/54104332775_ab862e88d9_o.jpg" class="carousel-slide" alt="TechCrunch Disrupt pavilion photo 4">
+                        <img src="/Images/AV-23 (1).webp" class="carousel-slide" alt="TechCrunch Disrupt pavilion photo 5">
                     </div>
                     <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 focus:outline-none z-10" aria-label="Previous image"><span class="text-2xl">❮</span></button>
                     <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/50 hover:bg-white rounded-full p-2 focus:outline-none z-10" aria-label="Next image"><span class="text-2xl">❯</span></button>
@@ -610,32 +636,266 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         <!-- Section 10: Testimonials -->
         <section id="testimonials" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-extrabold text-center text-gray-900">From Founders Like You</h2>
+                <h2 class="text-4xl sm:text-3xl font-extrabold text-center text-gray-900">From Founders Like You</h2>
                 <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
-                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-4 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-sm text-gray-500">TrustExam</p></div></div>
-                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="Images/Yevgeniya Yussupova CEO of NIET.jpg" alt="Yevgeniya Yussupova"><p class="mt-4 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="Images/Sherie Spence.jpg" alt="Sherie Spence"><p class="mt-4 font-bold text-gray-900">Sherie Spence</p><p class="text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="Images/Ardak Akhmetova.jpg" alt="Ardak Akhmetova"><p class="mt-4 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-sm text-gray-500">Global Grand University</p></div></div>
+                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-4 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-base sm:text-sm text-gray-500">TrustExam</p></div></div>
+                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Yevgeniya Yussupova CEO of NIET.webp" alt="Yevgeniya Yussupova"><p class="mt-4 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-base sm:text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
+                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Sherie Spence.webp" alt="Sherie Spence"><p class="mt-4 font-bold text-gray-900">Sherie Spence</p><p class="text-base sm:text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
+                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Ardak Akhmetova.webp" alt="Ardak Akhmetova"><p class="mt-4 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-base sm:text-sm text-gray-500">Global Grand University</p></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 11: Meet the Team -->
-        <section id="team" class="py-20 bg-slate-50">
+        <!-- Section 11: Featured Speakers -->
+        <section id="speakers" class="py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">The Team Behind the Pavilion</h2>
-                    <p class="mt-4 text-lg text-slate-600">Our experienced team is dedicated to your success at Disrupt.</p>
+                    <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-4xl">Featured Speakers at Disrupt</h2>
+                    <p class="mt-4 text-lg text-slate-600">Learn from the brightest minds in tech.</p>
                 </div>
-                <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDEoALjd9NITPBspnx5XJt4uSc0LvKzfg2wm71l" alt="Asset Abdualiyev"><h3 class="mt-6 text-xl font-bold text-slate-900">Asset Abdualiyev</h3><p class="mt-1 text-accent">Founder & CEO</p></div>
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE1sAY8GUwvu7o15e9Sqm2laIyRshbXUBnNOr3" alt="Aikumis Seksenbayeva"><h3 class="mt-6 text-xl font-bold text-slate-900">Aikumis Seksenbayeva</h3><p class="mt-1 text-accent">Senior Program Manager</p></div>
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="Images/Nilufar.jpeg" alt="Nilufar Majidova"><h3 class="mt-6 text-xl font-bold text-slate-900">Nilufar Majidova</h3><p class="mt-1 text-accent">Operations Program Manager</p></div>
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE4WRPFbNLGxklWuSdTiD0OA84eVhJR6gqs7Qn" alt="Shokhrukh Ibragimov"><h3 class="mt-6 text-xl font-bold text-slate-900">Shokhrukh Ibragimov</h3><p class="mt-1 text-accent">Program Manager</p></div>
-                    
-                </div>
-            </div>
-        </section>
+               <div class="mt-12 grid gap-x-6 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+ <div class="speaker-card text-center p-6 rounded-lg h-full flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Nikhil-Chandhok-e1782400490547.webp"
+        alt="Nikhil Chandhok">
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <h3 class="text-xl font-bold text-slate-900">
+            Nikhil Chandhok
+        </h3>
+        <a
+            href="https://www.linkedin.com/in/chandhok/"
+            target="_blank"
+            aria-label="LinkedIn">
+            <svg
+                viewBox="0 0 24 24"
+                class="w-5 h-5 text-[#0A66C2] hover:scale-110 transition">
+                <path
+                    fill="currentColor"
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p class="mt-2 text-base sm:text-sm text-slate-500">
+        Chief Product & Technology Officer, Circle
+    </p>
+
+    <div class="mt-4">
+        <a href="https://www.circle.com/" target="_blank" class="flex items-center justify-center gap-2 hover:opacity-80 transition">
+            <img
+                src="/Images/circle company.webp"
+                alt="Circle"
+                class="h-8 object-contain">
+            <span class="text-sm font-semibold text-slate-700">Circle</span>
+        </a>
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg h-full flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Arvind-Jain-Glean.webp"
+        alt="Arvind Jain">
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <h3 class="text-xl font-bold text-slate-900">
+            Arvind Jain
+        </h3>
+        <a
+            href="https://www.linkedin.com/in/jain-arvind/"
+            target="_blank"
+            aria-label="LinkedIn">
+            <svg
+                viewBox="0 0 24 24"
+                class="w-5 h-5 text-[#0A66C2] hover:scale-110 transition">
+                <path
+                    fill="currentColor"
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p class="mt-2 text-base sm:text-sm text-slate-500">
+        Founder and CEO, Glean
+    </p>
+
+    <div class="mt-4">
+        <a href="https://www.glean.com/" target="_blank" class="flex items-center justify-center gap-2 hover:opacity-80 transition">
+            <img
+                src="/Images/glean company.webp"
+                alt="Glean"
+                class="h-8 object-contain">
+            <span class="text-sm font-semibold text-slate-700">Glean</span>
+        </a>
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg h-full flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Jeff_Color-1000-e1778078607521.webp"
+        alt="Jeff Lawson">
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <h3 class="text-xl font-bold text-slate-900">
+            Jeff Lawson
+        </h3>
+        <a
+            href="https://www.linkedin.com/in/jeffiel/"
+            target="_blank"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p class="mt-2 text-base sm:text-sm text-slate-500">
+        Co-Founder, Twilio
+    </p>
+
+    <div class="mt-4">
+        <a href="https://www.twilio.com/en-us" target="_blank" class="flex items-center justify-center gap-2 hover:opacity-80 transition">
+            <img
+                src="/Images/Twilio Jeff.webp"
+                alt="Twilio"
+                class="h-8 object-contain">
+            <span class="text-sm font-semibold text-slate-700">Twilio</span>
+        </a>
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg h-full flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Ryan Meadows.webp"
+        alt="Ryan Meadows">
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <h3 class="text-xl font-bold text-slate-900">
+            Ryan Meadows
+        </h3>
+        <a
+            href="https://www.linkedin.com/in/rmeadows/"
+            target="_blank"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p class="mt-2 text-base sm:text-sm text-slate-500">
+        Chief Revenue Officer, Loveable
+    </p>
+
+    <div class="mt-4">
+        <a href="https://lovable.dev" target="_blank" class="flex items-center justify-center gap-2 hover:opacity-80 transition">
+            <img
+                src="/Images/loveable Ryan meadows.webp"
+                alt="Loveable"
+                class="h-8 object-contain">
+            <span class="text-sm font-semibold text-slate-700">Loveable</span>
+        </a>
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg h-full flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Robby-headshot.webp"
+        alt="Robby Stein">
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <h3 class="text-xl font-bold text-slate-900">
+            Robby Stein
+        </h3>
+        <a
+            href="https://www.linkedin.com/in/robbystein/"
+            target="_blank"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p class="mt-2 text-base sm:text-sm text-slate-500">
+        Vice President of Product, Google Search, Google
+    </p>
+
+    <div class="mt-4">
+        <a href="https://about.google/" target="_blank" class="flex items-center justify-center gap-2 hover:opacity-80 transition">
+            <img
+                src="/Images/google.webp"
+                alt="Google"
+                class="h-8 object-contain">
+            <span class="text-sm font-semibold text-slate-700">Google</span>
+        </a>
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg h-full flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/headshot-arsalan-tavakoli-e1777576150816.webp"
+        alt="Arsalan Tavakoli-Shiraji">
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <h3 class="text-xl font-bold text-slate-900">
+            Arsalan Tavakoli-Shiraji
+        </h3>
+        <a
+            href="https://www.linkedin.com/in/arsalantavakoli/"
+            target="_blank"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+        </a>
+    </div>
+
+    <p class="mt-2 text-base sm:text-sm text-slate-500">
+        Co-founder and SVP of Field Engineering, Databricks
+    </p>
+
+    <div class="mt-4">
+        <a href="https://www.databricks.com" target="_blank" class="flex items-center justify-center gap-2 hover:opacity-80 transition">
+            <img
+                src="/Images/databricks arsalan.webp"
+                alt="Databricks"
+                class="h-8 object-contain">
+            <span class="text-sm font-semibold text-slate-700">Databricks</span>
+        </a>
+    </div>
+
+</div>
+
+</div> <!-- closes grid -->
+
+<div class="mt-20 text-center">
+    <a href="https://techcrunch.com/events/techcrunch-disrupt/speakers/"
+       target="_blank"
+       class="cta-button inline-block bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-3 px-8 rounded-lg text-lg">
+        See Full Speaker List
+    </a>
+</div>
+
+</div> <!-- closes max-w-7xl -->
+</section> <!-- closes speakers section -->
 
         <!-- Section 12: Our Partners -->
         <section id="partners" class="py-16 bg-white">
@@ -650,271 +910,29 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
             </div>
         </section>
 
-        <!-- Section 13: Featured Speakers -->
-        <section id="speakers" class="py-20 bg-slate-50">
+        <!-- Section 13: Meet the Team -->
+        <section id="team" class="py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center">
-                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Featured Speakers at Disrupt</h2>
-                    <p class="mt-4 text-lg text-slate-600">Learn from the brightest minds in tech.</p>
+                    <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-4xl">The Team Behind the Pavilion</h2>
+                    <p class="mt-4 text-lg text-slate-600">Our experienced team is dedicated to your success at Disrupt.</p>
                 </div>
-               <div class="mt-12 grid gap-x-6 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
- <div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
-
-    <img
-        class="w-32 h-32 rounded-full speaker-image"
-        src="/Images/Nikhil-Chandhok-e1782400490547.webp"
-        alt="Nikhil Chandhok">
-
-    <h3 class="mt-6 text-xl font-bold text-slate-900">
-        Nikhil Chandhok
-    </h3>
-
-    <p class="mt-2 text-sm text-slate-500">
-        Chief Product & Technology Officer, Circle
-    </p>
-
-    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
-
-        <img
-            src="/Images/circle company.jpg"
-            alt="Circle"
-            class="h-8 object-contain">
-
-        <a
-            href="https://www.linkedin.com/in/chandhok/"
-            target="_blank"
-            aria-label="LinkedIn">
-
-            <svg
-                viewBox="0 0 24 24"
-                class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
-
-                <path
-                    fill="currentColor"
-                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-
-            </svg>
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
-
-    <img
-        class="w-32 h-32 rounded-full speaker-image"
-        src="/Images/Arvind-Jain-Glean.webp"
-        alt="Arvind Jain">
-
-    <h3 class="mt-6 text-xl font-bold text-slate-900">
-        Arvind Jain
-    </h3>
-
-    <p class="mt-2 text-sm text-slate-500">
-        Founder and CEO, Glean
-    </p>
-
-    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
-
-        <img
-            src="/Images/glean company.png"
-            alt="Glean"
-            class="h-8 object-contain">
-
-        <a
-            href="https://www.linkedin.com/in/jain-arvind/"
-            target="_blank"
-            aria-label="LinkedIn">
-
-            <svg
-                viewBox="0 0 24 24"
-                class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
-
-                <path
-                    fill="currentColor"
-                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-
-            </svg>
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
-
-    <img
-        class="w-32 h-32 rounded-full speaker-image"
-        src="/Images/Jeff_Color-1000-e1778078607521.webp"
-        alt="Jeff Lawson">
-
-    <h3 class="mt-6 text-xl font-bold text-slate-900">
-        Jeff Lawson
-    </h3>
-
-    <p class="mt-2 text-sm text-slate-500">
-        Co-Founder, Twilio
-    </p>
-
-    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
-
-        <img
-            src="/Images/Twilio Jeff.jpg"
-            alt="Twilio"
-            class="h-8 object-contain">
-
-        <a
-            href="https://www.linkedin.com/in/jeffiel/"
-            target="_blank"
-            aria-label="LinkedIn">
-
-            <svg
-                viewBox="0 0 24 24"
-                class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
-
-                <path
-                    fill="currentColor"
-                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-
-            </svg>
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
-
-    <img
-        class="w-32 h-32 rounded-full speaker-image"
-        src="/Images/Ryan Meadows.webp"
-        alt="Ryan Meadows">
-
-    <h3 class="mt-6 text-xl font-bold text-slate-900">
-        Ryan Meadows
-    </h3>
-
-    <p class="mt-2 text-sm text-slate-500">
-        Chief Revenue Officer, Loveable
-    </p>
-
-    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
-
-        <img
-            src="/Images/loveable Ryan meadows.jpg"
-            alt="Loveable"
-            class="h-8 object-contain">
-
-        <a
-            href="https://www.linkedin.com/in/rmeadows/"
-            target="_blank"
-            aria-label="LinkedIn">
-
-            <svg viewBox="0 0 24 24" class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
-                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-            </svg>
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
-
-    <img
-        class="w-32 h-32 rounded-full speaker-image"
-        src="/Images/Robby-headshot.webp"
-        alt="Robby Stein">
-
-    <h3 class="mt-6 text-xl font-bold text-slate-900">
-        Robby Stein
-    </h3>
-
-    <p class="mt-2 text-sm text-slate-500">
-        Vice President of Product, Google Search, Google
-    </p>
-
-    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
-
-        <img
-            src="/Images/google.png"
-            alt="Google"
-            class="h-8 object-contain">
-
-        <a
-            href="https://www.linkedin.com/in/robbystein/"
-            target="_blank"
-            aria-label="LinkedIn">
-
-            <svg viewBox="0 0 24 24" class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
-                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-            </svg>
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
-
-    <img
-        class="w-32 h-32 rounded-full speaker-image"
-        src="/Images/headshot-arsalan-tavakoli-e1777576150816.webp"
-        alt="Arsalan Tavakoli-Shiraji">
-
-    <h3 class="mt-6 text-xl font-bold text-slate-900">
-        Arsalan Tavakoli-Shiraji
-    </h3>
-
-    <p class="mt-2 text-sm text-slate-500">
-        Co-founder and SVP of Field Engineering, Databricks
-    </p>
-
-    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
-
-        <img
-            src="/Images/databricks arsalan.png"
-            alt="Databricks"
-            class="h-8 object-contain">
-
-        <a
-            href="https://www.linkedin.com/in/arsalantavakoli/"
-            target="_blank"
-            aria-label="LinkedIn">
-
-            <svg viewBox="0 0 24 24" class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
-                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-            </svg>
-
-        </a>
-
-    </div>
-
-</div>
-
-<div class="mt-20 text-center">
-    <a href="https://techcrunch.com/events/techcrunch-disrupt/speakers/"
-       target="_blank"
-       class="cta-button inline-block bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold py-3 px-8 rounded-lg text-lg">
-        See Full Speaker List
-    </a>
-</div>
-
-</div> <!-- closes max-w-7xl -->
-</section> <!-- closes speakers section -->
+                <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDEoALjd9NITPBspnx5XJt4uSc0LvKzfg2wm71l" alt="Asset Abdualiyev"><h3 class="mt-6 text-xl font-bold text-slate-900">Asset Abdualiyev</h3><p class="mt-1 text-accent">Founder & CEO</p></div>
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE1sAY8GUwvu7o15e9Sqm2laIyRshbXUBnNOr3" alt="Aikumis Seksenbayeva"><h3 class="mt-6 text-xl font-bold text-slate-900">Aikumis Seksenbayeva</h3><p class="mt-1 text-accent">Senior Program Manager</p></div>
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="/Images/Nilufar.webp" alt="Nilufar Majidova"><h3 class="mt-6 text-xl font-bold text-slate-900">Nilufar Majidova</h3><p class="mt-1 text-accent">Operations Program Manager</p></div>
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE4WRPFbNLGxklWuSdTiD0OA84eVhJR6gqs7Qn" alt="Shokhrukh Ibragimov"><h3 class="mt-6 text-xl font-bold text-slate-900">Shokhrukh Ibragimov</h3><p class="mt-1 text-accent">Program Manager</p></div>
+
+                </div>
+            </div>
+        </section>
 
   
 
         <!-- Section 14: FAQ -->
         <section id="faq" class="py-20 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-extrabold text-center text-gray-900">Frequently Asked Questions</h2>
+                <h2 class="text-4xl sm:text-3xl font-extrabold text-center text-gray-900">Frequently Asked Questions</h2>
                 <div class="mt-10 space-y-4">
                     <details class="faq-item bg-white p-6 rounded-lg shadow-sm group"><summary class="font-medium cursor-pointer list-none flex justify-between items-center">What is the exact cost?<span class="transition group-open:rotate-180">▼</span></summary><p class="text-gray-600 mt-4">The total cost is $7,000 per startup.</p></details>
                     <details class="faq-item bg-white p-6 rounded-lg shadow-sm group"><summary class="font-medium cursor-pointer list-none flex justify-between items-center">Do you help with U.S. visa applications?<span class="transition group-open:rotate-180">▼</span></summary><p class="text-gray-600 mt-4">While we cannot guarantee visa issuance, we provide official letters of invitation and guidance documents to support your B1/B2 visa application process.</p></details>
@@ -939,7 +957,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="bg-slate-800 rounded-2xl p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
-                        <h2 class="text-3xl font-extrabold text-white">Ready to Take the Global Stage?</h2>
+                        <h2 class="text-4xl sm:text-3xl font-extrabold text-white">Ready to Take the Global Stage?</h2>
                         <p class="mt-4 text-lg text-slate-300">Don't miss this opportunity to accelerate your startup's growth. Spots are limited and applications are reviewed on a rolling basis.</p>
                         <p class="mt-4 text-2xl font-bold text-amber-400">Application Deadline: September 15, 2026</p>
                         <div class="mt-8"><a href="https://forms.gle/wnHzborgYZmCZQBT6" target="_blank" class="cta-button inline-block bg-accent text-white font-bold py-4 px-10 rounded-lg text-lg">Apply for the Pavilion</a></div>
@@ -970,14 +988,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+
+    const setMobileMenuOpen = (open) => {
+        mobileMenu.classList.toggle('mobile-menu-open', open);
+        mobileMenuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+        if (menuIconOpen && menuIconClose) {
+            menuIconOpen.classList.toggle('hidden', open);
+            menuIconClose.classList.toggle('hidden', !open);
+        }
+    };
 
     mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+        setMobileMenuOpen(!mobileMenu.classList.contains('mobile-menu-open'));
     });
 
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
+            setMobileMenuOpen(false);
         });
     });
 
@@ -1078,109 +1107,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // Setup Advantage Carousel (autoplay slideshow)
     setupCarousel(null, 'advantage-carousel-track', null, null, 3000);
 
-    // Continuous marquee gallery
-    (function setupMarquee(){
+    // Gallery fade slideshow (simple, low-CPU: no continuous scrolling)
+    (function setupFadeSlideshow(){
         const container = document.getElementById('carousel-container');
-        const track = document.getElementById('carousel-track');
         const prev = document.getElementById('prevBtn');
         const next = document.getElementById('nextBtn');
-        if (!container || !track) return;
+        if (!container) return;
 
-        const originals = Array.from(track.children);
-        // Duplicate slides for seamless infinite loop
-        originals.forEach(img => {
-            const c = img.cloneNode(true);
-            c.setAttribute('aria-hidden','true');
-            track.appendChild(c);
-        });
+        const slides = Array.from(container.querySelectorAll('.carousel-slide'));
+        if (slides.length === 0) return;
 
-        let offset = 0;              // px translation (negative direction)
-        let baseWidth = 0;           // width of original set
-        let paused = false;
-        let targetOffset = null;     // for manual arrow snap
-        let lastTs = null;
-        const SPEED = 60;            // px per second
+        let currentIndex = Math.max(0, slides.findIndex(s => s.classList.contains('active')));
+        let timer = null;
+        const AUTOPLAY_INTERVAL = 4000;
 
-        const measure = () => {
-            baseWidth = 0;
-            for (let i = 0; i < originals.length; i++) {
-                baseWidth += originals[i].getBoundingClientRect().width;
-            }
+        const showSlide = (index) => {
+            slides[currentIndex].classList.remove('active');
+            currentIndex = (index + slides.length) % slides.length;
+            slides[currentIndex].classList.add('active');
         };
 
-        const waitForImages = () => {
-            const imgs = Array.from(track.querySelectorAll('img'));
-            let remaining = imgs.filter(i => !i.complete).length;
-            if (remaining === 0) { measure(); return; }
-            imgs.forEach(i => {
-                if (!i.complete) {
-                    i.addEventListener('load', () => { if(--remaining===0) measure(); }, { once:true });
-                    i.addEventListener('error', () => { if(--remaining===0) measure(); }, { once:true });
-                }
-            });
-        };
-        waitForImages();
-        window.addEventListener('resize', measure);
-
-       
-
-        const currentIndex = () => {
-            if (!baseWidth) return 0;
-            let acc = 0;
-            const pos = ((-offset) % baseWidth + baseWidth) % baseWidth;
-            for (let i = 0; i < originals.length; i++) {
-                const w = originals[i].getBoundingClientRect().width;
-                if (pos < acc + w) return i;
-                acc += w;
-            }
-            return 0;
-        };
-        const offsetForIndex = (idx) => {
-            let acc = 0;
-            for (let i = 0; i < idx; i++) acc += originals[i].getBoundingClientRect().width;
-            return -acc;
+        const startAutoplay = () => {
+            if (timer) clearInterval(timer);
+            timer = setInterval(() => showSlide(currentIndex + 1), AUTOPLAY_INTERVAL);
         };
 
-        const goTo = (idx) => {
-            if (!baseWidth) return;
-            // Normalize current offset into [-baseWidth, 0] for smooth transition
-            let normalized = offset % baseWidth;
-            if (normalized > 0) normalized -= baseWidth;
-            offset = normalized;
-            targetOffset = offsetForIndex(idx);
-            // choose shortest direction: if target is greater than current, snap by -baseWidth so we always move left/right sensibly
-            if (targetOffset > offset) targetOffset -= baseWidth;
-        };
+        if (next) next.addEventListener('click', () => { showSlide(currentIndex + 1); startAutoplay(); });
+        if (prev) prev.addEventListener('click', () => { showSlide(currentIndex - 1); startAutoplay(); });
 
-        if (next) next.addEventListener('click', () => goTo((currentIndex()+1) % originals.length));
-        if (prev) prev.addEventListener('click', () => goTo((currentIndex()-1+originals.length) % originals.length));
-
-        const tick = (ts) => {
-            if (lastTs == null) lastTs = ts;
-            const dt = (ts - lastTs) / 1000;
-            lastTs = ts;
-
-            if (baseWidth > 0) {
-                if (targetOffset !== null) {
-                    // Smoothly ease toward targetOffset then resume auto-scroll
-                    const diff = targetOffset - offset;
-                    if (Math.abs(diff) < 0.5) {
-                        offset = targetOffset;
-                        targetOffset = null;
-                    } else {
-                        offset += diff * Math.min(1, dt * 6);
-                    }
-                } else if (!paused) {
-                    offset -= SPEED * dt;
-                }
-                // Wrap for infinite loop
-                if (offset <= -baseWidth) offset += baseWidth;
-                if (offset > 0) offset -= baseWidth;
-                track.style.transform = 'translate3d(' + offset + 'px,0,0)';
-            }
-            requestAnimationFrame(tick);
-        };
-        requestAnimationFrame(tick);
+        startAutoplay();
     })();
 
 });
