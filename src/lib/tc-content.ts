@@ -676,7 +676,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
         <img
-            src="public/circle company.jpg"
+            src="/Images/circle company.jpg"
             alt="Circle"
             class="h-8 object-contain">
 
@@ -719,7 +719,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
         <img
-            src="public/Images/glean company.png"
+            src="/Images/glean company.png"
             alt="Glean"
             class="h-8 object-contain">
 
@@ -762,7 +762,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
         <img
-            src="public/Images/Twilio Jeff.jpg"
+            src="/Images/Twilio Jeff.jpg"
             alt="Twilio"
             class="h-8 object-contain">
 
@@ -805,7 +805,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
         <img
-            src="public/Images/loveable Ryan meadows.jpg"
+            src="/Images/loveable Ryan meadows.jpg"
             alt="Loveable"
             class="h-8 object-contain">
 
@@ -842,7 +842,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
         <img
-            src="public/Images/google.png"
+            src="/Images/google.png"
             alt="Google"
             class="h-8 object-contain">
 
@@ -879,7 +879,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
         <img
-            src="public/Images/databricks arsalan.png"
+            src="/Images/databricks arsalan.png"
             alt="Databricks"
             class="h-8 object-contain">
 
