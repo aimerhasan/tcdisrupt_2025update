@@ -52,50 +52,12 @@ export const SITE_STYLE = `
 }
 
 .logo-hotspot:hover{
-    background:rgba(34,197,94,.08);
-    border-radius:12px;
-    box-shadow:0 0 16px rgba(34,197,94,.25);
-    transform:scale(1.03);
-}   
-
-
-.linkedin-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:.45rem;
-
-    margin-top:auto;
-
-    padding:8px 16px;
-
-    border-radius:9999px;
-
-    background:#0A66C2;
-
-    color:#fff;
-
-    font-size:.85rem;
-
-    font-weight:600;
-
-    text-decoration:none;
-
-    transition:all .25s ease;
+    background:none;
+    box-shadow:none;
+    transform:none;
 }
 
-.linkedin-btn:hover{
-    background:#004182;
-    transform:translateY(-2px);
-    box-shadow:0 10px 20px rgba(10,102,194,.35);
-}
 
-.linkedin-btn svg{
-    width:16px;
-    height:16px;
-    fill:currentColor;
-    flex-shrink:0;
-}
 
 .speaker-card{
     transition:all .25s ease;
@@ -227,31 +189,17 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
             <div>
                 <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Gain Your Unfair Advantage
+                    Who Can Apply?
                 </h2>
 
                 <p class="mt-4 text-xl text-gray-600">
-                    TechCrunch Disrupt is one of the world's most competitive startup events. Silkroad Innovation Hub helps founders maximize every opportunity by providing end-to-end support before, during, and after the conference.
+                    Top startups from Central Eurasia that are building innovative technology products and are ready to showcase themselves on the global stage at TechCrunch Disrupt.
                 </p>
 
                 <div class="mt-8 space-y-6">
 
 
-                <div class="mt-8 flex flex-wrap gap-3">
-
-    <span class="bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full">
-        Innovative Tech Startups
-    </span>
-
-    <span class="bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full">
-        Global Ambitions
-    </span>
-
-    <span class="bg-accent/10 text-accent font-semibold px-4 py-2 rounded-full">
-        Based in or from Central Eurasia
-    </span>
-
-</div>
+  
 
                     <div>
                         <h3 class="text-xl font-bold">
@@ -264,10 +212,10 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
                     <div>
                         <h3 class="text-xl font-bold">
-                            Visa & Logistical Support
+                            Invitation Letter
                         </h3>
                         <p class="mt-2 text-gray-500">
-                            Our team provides invitation letters, visa guidance, and hands-on logistical support so you can focus on building relationships instead of managing paperwork.
+                            Accepted startups receive an official invitation letter to support their participation in TechCrunch Disrupt.
                         </p>
                     </div>
 
@@ -294,11 +242,11 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     </div>
     <div class="mt-16 border-t border-gray-200 pt-10">
     <h3 class="text-2xl font-bold text-center text-gray-900">
-        Trusted by Startups from Previous Silkroad Pavilions
+        Previous Participants
     </h3>
 
     <p class="mt-3 text-center text-gray-600">
-        Join a growing network of founders who have showcased their startups through the Silkroad Pavilion.
+    
     </p>
 
    <div class="mt-8 relative mx-auto max-w-5xl">
@@ -536,7 +484,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         </div>
 
         <!-- Cards -->
-        <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4 mb-12">
 
             <div class="group rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg p-7 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl">
 
@@ -561,11 +509,11 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 </div>
 
                 <h3 class="mt-6 text-xl font-bold text-white">
-                    Visa Support
+                    Invitation Letter
                 </h3>
 
                 <p class="mt-3 text-slate-300 leading-7">
-                    Invitation letters, visa guidance, and logistical assistance before and during the conference.
+                   Accepted startups receive an official invitation letter to support participation in TechCrunch Disrupt.
                 </p>
 
             </div>
@@ -581,7 +529,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 </h3>
 
                 <p class="mt-3 text-slate-300 leading-7">
-                    Meet investors, media, enterprise customers, and strategic partners throughout TechCrunch Disrupt.
+                   Meet investors, media, customers and strategic partners throughout TechCrunch Disrupt.
                 </p>
 
             </div>
@@ -602,20 +550,21 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
 </div>
 
-        <!-- CTA -->
+</div> <!-- End of cards grid -->
 
-        <div class="mt-16 text-center">
+<!-- CTA -->
+<div class="mt-10 flex justify-center">
 
-            <a
-                href="https://forms.gle/wnHzborgYZmCZQBT6"
-                target="_blank"
-                class="inline-flex items-center justify-center rounded-xl bg-green-500 hover:bg-green-600 px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1">
-                Secure Your Spot
-            </a>
+    <a
+        href="https://forms.gle/wnHzborgYZmCZQBT6"
+        target="_blank"
+        class="inline-flex items-center justify-center rounded-xl bg-green-500 hover:bg-green-600 px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1">
+        Secure Your Spot
+    </a>
 
-        </div>
+</div>
 
-    </div>
+</div> <!-- End of max-w-7xl -->
 
 </section>
 
@@ -681,8 +630,9 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDEoALjd9NITPBspnx5XJt4uSc0LvKzfg2wm71l" alt="Asset Abdualiyev"><h3 class="mt-6 text-xl font-bold text-slate-900">Asset Abdualiyev</h3><p class="mt-1 text-accent">Founder & CEO</p></div>
                     <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE1sAY8GUwvu7o15e9Sqm2laIyRshbXUBnNOr3" alt="Aikumis Seksenbayeva"><h3 class="mt-6 text-xl font-bold text-slate-900">Aikumis Seksenbayeva</h3><p class="mt-1 text-accent">Senior Program Manager</p></div>
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE4WRPFbNLGxklWuSdTiD0OA84eVhJR6gqs7Qn" alt="Shokhrukh Ibragimov"><h3 class="mt-6 text-xl font-bold text-slate-900">Shokhrukh Ibragimov</h3><p class="mt-1 text-accent">Operations Project Manager</p></div>
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="Images/Nilufar.jpeg" alt="Nilufar Majidova"><h3 class="mt-6 text-xl font-bold text-slate-900">Nilufar Majidova</h3><p class="mt-1 text-accent">Program Manager</p></div>
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="Images/Nilufar.jpeg" alt="Nilufar Majidova"><h3 class="mt-6 text-xl font-bold text-slate-900">Nilufar Majidova</h3><p class="mt-1 text-accent">Operations Program Manager</p></div>
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE4WRPFbNLGxklWuSdTiD0OA84eVhJR6gqs7Qn" alt="Shokhrukh Ibragimov"><h3 class="mt-6 text-xl font-bold text-slate-900">Shokhrukh Ibragimov</h3><p class="mt-1 text-accent">Program Manager</p></div>
+                    
                 </div>
             </div>
         </section>
@@ -692,8 +642,8 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="pb-4 text-center text-2xl font-semibold text-gray-600">Proudly Supported By</h2>
                 <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                 <a href="https://astanahub.com" target="_blank" class="flex justify-center"><img src="https://utfs.io/f/5lAbzPMR2hDEAEQkNi8n3KOXuIPyz5YopqHcStNnrWvB81Lm" alt="Astana Hub Logo" class="h-12 grayscale hover:grayscale-0 transition"></a>
                     <a href="https://it-park.uz/" target="_blank" class="flex justify-center"><img src="https://utfs.io/f/5lAbzPMR2hDEJ6ou5aTNd8qgoWVa5bZuLlBwfikjUP1GAQ2O" alt="IT Park Uzbekistan Logo" class="h-12 grayscale hover:grayscale-0 transition"></a>
-                    <a href="https://astanahub.com" target="_blank" class="flex justify-center"><img src="https://utfs.io/f/5lAbzPMR2hDEAEQkNi8n3KOXuIPyz5YopqHcStNnrWvB81Lm" alt="Astana Hub Logo" class="h-12 grayscale hover:grayscale-0 transition"></a>
                     <a href="https://the-tech.kz/" target="_blank" class="flex justify-center"><img src="https://utfs.io/f/5lAbzPMR2hDEqtDsuv2R35ILznmDWpEMQBPGa4Xb1c7e9gHC" alt="The Tech Logo" class="h-8 grayscale hover:grayscale-0 transition"></a>
                     <a href="https://www.slkrd.club/" target="_blank" class="flex justify-center"><img src="https://utfs.io/f/5lAbzPMR2hDEcdwjeGJKxB9ve3jY6MSVgGtDEz8ROILyfdaZ" alt="Silkroad Angels Club Logo" class="h-12 grayscale hover:grayscale-0 transition"></a>
                 </div>
@@ -708,86 +658,245 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     <p class="mt-4 text-lg text-slate-600">Learn from the brightest minds in tech.</p>
                 </div>
                <div class="mt-12 grid gap-x-6 gap-y-10 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-                    <div class="speaker-card text-center p-4 rounded-lg min-h-[280px] flex flex-col items-center">
-    <img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Nikhil-Chandhok-e1782400490547.webp?w=300" alt="Nikhil Chandhok">
+ <div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
 
-    <h3 class="mt-6 font-bold text-slate-900">
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Nikhil-Chandhok-e1782400490547.webp"
+        alt="Nikhil Chandhok">
+
+    <h3 class="mt-6 text-xl font-bold text-slate-900">
         Nikhil Chandhok
     </h3>
 
-    <p class="mt-1 text-sm text-slate-500">
+    <p class="mt-2 text-sm text-slate-500">
         Chief Product & Technology Officer, Circle
     </p>
 
-    <a
-        class="linkedin-btn"
-        target="_blank"
-        href="https://www.linkedin.com/in/chandhok/">
+    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
 
-        <svg viewBox="0 0 24 24">
-            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
-        </svg>
+        <img
+            src="public/circle company.jpg"
+            alt="Circle"
+            class="h-8 object-contain">
 
-        LinkedIn
+        <a
+            href="https://www.linkedin.com/in/chandhok/"
+            target="_blank"
+            aria-label="LinkedIn">
 
-    </a>
-</div>
-                 <div class="speaker-card text-center p-4 rounded-lg min-h-[300px] flex flex-col items-center">
-    <img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Arvind-Jain-Glean.webp?w=300" alt="Arvind Jain">
-    <h3 class="mt-6 font-bold text-slate-900">Arvind Jain</h3>
-    <p class="mt-1 text-sm text-slate-500">Founder and CEO, Glean</p>
+            <svg
+                viewBox="0 0 24 24"
+                class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
 
-    <a class="linkedin-btn mt-auto" target="_blank" href="https://www.linkedin.com/in/jain-arvind/">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/></svg>
-        LinkedIn
-    </a>
-</div>
+                <path
+                    fill="currentColor"
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
 
-<div class="speaker-card text-center p-4 rounded-lg min-h-[300px] flex flex-col items-center">
-    <img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Jeff_Color-1000-e1778078607521.webp?w=300" alt="Jeff Lawson">
-    <h3 class="mt-6 font-bold text-slate-900">Jeff Lawson</h3>
-    <p class="mt-1 text-sm text-slate-500">Co-Founder, Twilio</p>
+            </svg>
 
-    <a class="linkedin-btn mt-auto" target="_blank" href="https://www.linkedin.com/in/jeffiel/">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/></svg>
-        LinkedIn
-    </a>
+        </a>
+
+    </div>
+
 </div>
 
-<div class="speaker-card text-center p-4 rounded-lg min-h-[300px] flex flex-col items-center">
-    <img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Ryan Meadows.webp?w=300" alt="Ryan Meadows">
-    <h3 class="mt-6 font-bold text-slate-900">Ryan Meadows</h3>
-    <p class="mt-1 text-sm text-slate-500">Chief Revenue Officer, Loveable</p>
+<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
 
-    <a class="linkedin-btn mt-auto" target="_blank" href="https://www.linkedin.com/in/rmeadows/">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/></svg>
-        LinkedIn
-    </a>
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Arvind-Jain-Glean.webp"
+        alt="Arvind Jain">
+
+    <h3 class="mt-6 text-xl font-bold text-slate-900">
+        Arvind Jain
+    </h3>
+
+    <p class="mt-2 text-sm text-slate-500">
+        Founder and CEO, Glean
+    </p>
+
+    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
+
+        <img
+            src="public/Images/glean company.png"
+            alt="Glean"
+            class="h-8 object-contain">
+
+        <a
+            href="https://www.linkedin.com/in/jain-arvind/"
+            target="_blank"
+            aria-label="LinkedIn">
+
+            <svg
+                viewBox="0 0 24 24"
+                class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
+
+                <path
+                    fill="currentColor"
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+
+            </svg>
+
+        </a>
+
+    </div>
+
 </div>
 
-<div class="speaker-card text-center p-4 rounded-lg min-h-[300px] flex flex-col items-center">
-    <img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/Robby-headshot.webp?w=300" alt="Robby Stein">
-    <h3 class="mt-6 font-bold text-slate-900">Robby Stein</h3>
-    <p class="mt-1 text-sm text-slate-500">Vice President of Product, Google Search, Google</p>
+<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
 
-    <a class="linkedin-btn mt-auto" target="_blank" href="https://www.linkedin.com/in/robbystein/">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/></svg>
-        LinkedIn
-    </a>
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Jeff_Color-1000-e1778078607521.webp"
+        alt="Jeff Lawson">
+
+    <h3 class="mt-6 text-xl font-bold text-slate-900">
+        Jeff Lawson
+    </h3>
+
+    <p class="mt-2 text-sm text-slate-500">
+        Co-Founder, Twilio
+    </p>
+
+    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
+
+        <img
+            src="public/Images/Twilio Jeff.jpg"
+            alt="Twilio"
+            class="h-8 object-contain">
+
+        <a
+            href="https://www.linkedin.com/in/jeffiel/"
+            target="_blank"
+            aria-label="LinkedIn">
+
+            <svg
+                viewBox="0 0 24 24"
+                class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
+
+                <path
+                    fill="currentColor"
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+
+            </svg>
+
+        </a>
+
+    </div>
+
 </div>
 
-<div class="speaker-card text-center p-4 rounded-lg min-h-[300px] flex flex-col items-center">
-    <img class="w-32 h-32 rounded-full mx-auto speaker-image" src="Images/headshot-arsalan-tavakoli-e1777576150816.webp?w=300" alt="Arsalan Tavakoli-Shiraji">
-    <h3 class="mt-6 font-bold text-slate-900">Arsalan Tavakoli-Shiraji</h3>
-    <p class="mt-1 text-sm text-slate-500">Co-founder and SVP of Field Engineering, Databricks</p>
+<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
 
-    <a class="linkedin-btn mt-auto" target="_blank" href="https://www.linkedin.com/in/arsalantavakoli/">
-        <svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/></svg>
-        LinkedIn
-</a>
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Ryan Meadows.webp"
+        alt="Ryan Meadows">
 
-</div> <!-- closes Arsalan speaker-card -->
-</div> <!-- closes the speaker grid -->
+    <h3 class="mt-6 text-xl font-bold text-slate-900">
+        Ryan Meadows
+    </h3>
+
+    <p class="mt-2 text-sm text-slate-500">
+        Chief Revenue Officer, Loveable
+    </p>
+
+    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
+
+        <img
+            src="public/Images/loveable Ryan meadows.jpg"
+            alt="Loveable"
+            class="h-8 object-contain">
+
+        <a
+            href="https://www.linkedin.com/in/rmeadows/"
+            target="_blank"
+            aria-label="LinkedIn">
+
+            <svg viewBox="0 0 24 24" class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+
+        </a>
+
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/Robby-headshot.webp"
+        alt="Robby Stein">
+
+    <h3 class="mt-6 text-xl font-bold text-slate-900">
+        Robby Stein
+    </h3>
+
+    <p class="mt-2 text-sm text-slate-500">
+        Vice President of Product, Google Search, Google
+    </p>
+
+    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
+
+        <img
+            src="public/Images/google.png"
+            alt="Google"
+            class="h-8 object-contain">
+
+        <a
+            href="https://www.linkedin.com/in/robbystein/"
+            target="_blank"
+            aria-label="LinkedIn">
+
+            <svg viewBox="0 0 24 24" class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+
+        </a>
+
+    </div>
+
+</div>
+
+<div class="speaker-card text-center p-6 rounded-lg min-h-[320px] flex flex-col items-center">
+
+    <img
+        class="w-32 h-32 rounded-full speaker-image"
+        src="/Images/headshot-arsalan-tavakoli-e1777576150816.webp"
+        alt="Arsalan Tavakoli-Shiraji">
+
+    <h3 class="mt-6 text-xl font-bold text-slate-900">
+        Arsalan Tavakoli-Shiraji
+    </h3>
+
+    <p class="mt-2 text-sm text-slate-500">
+        Co-founder and SVP of Field Engineering, Databricks
+    </p>
+
+    <div class="mt-auto pt-6 flex items-center justify-center gap-4">
+
+        <img
+            src="public/Images/databricks arsalan.png"
+            alt="Databricks"
+            class="h-8 object-contain">
+
+        <a
+            href="https://www.linkedin.com/in/arsalantavakoli/"
+            target="_blank"
+            aria-label="LinkedIn">
+
+            <svg viewBox="0 0 24 24" class="w-6 h-6 text-[#0A66C2] hover:scale-110 transition">
+                <path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 8h5v16H0zm8 0h4.79v2.18h.07C13.53 8.94 15.33 8 17.53 8 22.08 8 23 10.98 23 14.84V24h-5v-8.01c0-1.91-.03-4.36-2.66-4.36-2.66 0-3.07 2.08-3.07 4.22V24H8z"/>
+            </svg>
+
+        </a>
+
+    </div>
+
+</div>
 
 <div class="mt-20 text-center">
     <a href="https://techcrunch.com/events/techcrunch-disrupt/speakers/"
