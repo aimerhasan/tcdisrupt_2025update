@@ -512,7 +512,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         </div>
 
         <!-- Cards -->
-        <div class="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-4 mb-12">
+        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 mb-12">
 
             <div class="group rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg p-7 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl">
 
@@ -920,7 +920,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDEoALjd9NITPBspnx5XJt4uSc0LvKzfg2wm71l" alt="Asset Abdualiyev"><h3 class="mt-6 text-xl font-bold text-slate-900">Asset Abdualiyev</h3><p class="mt-1 text-accent">Founder & CEO</p></div>
                     <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE1sAY8GUwvu7o15e9Sqm2laIyRshbXUBnNOr3" alt="Aikumis Seksenbayeva"><h3 class="mt-6 text-xl font-bold text-slate-900">Aikumis Seksenbayeva</h3><p class="mt-1 text-accent">Senior Program Manager</p></div>
-                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="/Images/Nilufar.webp" alt="Nilufar Majidova"><h3 class="mt-6 text-xl font-bold text-slate-900">Nilufar Majidova</h3><p class="mt-1 text-accent">Operations Program Manager</p></div>
+                    <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="/Images/Nilufar.webp" alt="Nilufar Majidova"><h3 class="mt-6 text-xl font-bold text-slate-900">Nilufar Majidova</h3><p class="mt-1 text-accent">Program Operations Manager</p></div>
                     <div class="team-card text-center p-6 rounded-lg"><img class="w-24 h-24 rounded-full mx-auto team-image" src="https://utfs.io/f/5lAbzPMR2hDE4WRPFbNLGxklWuSdTiD0OA84eVhJR6gqs7Qn" alt="Shokhrukh Ibragimov"><h3 class="mt-6 text-xl font-bold text-slate-900">Shokhrukh Ibragimov</h3><p class="mt-1 text-accent">Program Manager</p></div>
 
                 </div>
@@ -960,13 +960,13 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                         <h2 class="text-4xl sm:text-3xl font-extrabold text-white">Ready to Take the Global Stage?</h2>
                         <p class="mt-4 text-lg text-slate-300">Don't miss this opportunity to accelerate your startup's growth. Spots are limited and applications are reviewed on a rolling basis.</p>
                         <p class="mt-4 text-2xl font-bold text-amber-400">Application Deadline: September 15, 2026</p>
-                        <div class="mt-8"><a href="https://forms.gle/wnHzborgYZmCZQBT6" target="_blank" class="cta-button inline-block bg-accent text-white font-bold py-4 px-10 rounded-lg text-lg">Apply for the Pavilion</a></div>
+                        <div class="mt-8"><a href="https://forms.gle/wnHzborgYZmCZQBT6" target="_blank" class="cta-button inline-block bg-accent text-white font-extrabold sm:font-bold py-3.5 px-8 sm:py-4 sm:px-10 rounded-lg text-xl sm:text-lg">Apply for the Pavilion</a></div>
                     </div>
                     <div class="text-slate-200">
                         <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
                         <div class="mt-6 space-y-4">
                             <a href="mailto:buildunicorns@silkroadinnovationhub.com" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✉️</span> Email Us</a>
-                            <a href="https://t.me/pakevic" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✈️</span> Contact on Telegram</a>
+                            <a href="https://t.me/nilufar_majidova" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✈️</span> Contact on Telegram</a>
                              <div class="flex items-center text-lg text-slate-300 pt-2"><span class="text-2xl mr-3">📍</span> 724 Oak Grove Ave Menlo Park, CA 94025</div>
                         </div>
                     </div>
