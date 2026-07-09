@@ -1,5 +1,10 @@
 // Auto-embedded static site content. Edit these strings to update the site.
 export const SITE_STYLE = `
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc; /* slate-50 */
@@ -357,7 +362,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://geomotive.io/?lang=en"
    target="_blank"
    class="logo-hotspot"
-   style="left:85%; top:20%; width:17%; height:13%;"
+   style="left:85%; top:20%; width:15%; height:13%;"
    title="Geomotive"></a>
 
    <!-- THIRD ROW -->
@@ -433,7 +438,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://call2action.ai/"
    target="_blank"
    class="logo-hotspot"
-   style="left:84.5%; top:58%; width:16%; height:14%;"
+   style="left:84.5%; top:58%; width:15.5%; height:14%;"
    title="Call2Action"></a>
 
    <!-- FIFTH ROW -->
@@ -604,12 +609,12 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     <h2 class="text-4xl font-bold tracking-tight text-slate-900 sm:text-4xl">Our Proven Track Record at Disrupt</h2>
                     <p class="mt-4 text-lg text-slate-600">We have a history of bringing the biggest and best cohorts to the conference.</p>
                 </div>
-                <div class="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
-                    <div class="bg-slate-100 p-8 rounded-xl text-center flex flex-col justify-center"><p class="text-base font-semibold text-slate-500">2023</p><h3 class="mt-2 text-5xl font-extrabold text-accent stat-number" data-target="14">0</h3><p class="mt-2 text-base font-medium text-slate-500">Startups</p></div>
-                    <div class="bg-slate-100 p-8 rounded-xl text-center flex flex-col justify-center"><p class="text-base font-semibold text-slate-500">2024</p><h3 class="mt-2 text-5xl font-extrabold text-accent stat-number" data-target="24">0</h3><p class="mt-2 text-base font-medium text-slate-500">Startups</p></div>
-                    <div class="bg-slate-100 p-8 rounded-xl text-center flex flex-col justify-center"><p class="text-base font-semibold text-slate-500">2025</p><h3 class="mt-2 text-5xl font-extrabold text-accent stat-number" data-target="20">0</h3><p class="mt-2 text-base font-medium text-slate-500">Startups</p></div>
-                    <div class="bg-slate-100 p-8 rounded-xl text-center flex flex-col justify-center"><h3 class="text-4xl font-extrabold text-accent leading-tight">$2B+</h3><p class="mt-2 text-base font-medium text-slate-500">Participants' Total Valuation</p></div>
-                    <div class="bg-slate-100 p-8 rounded-xl text-center flex flex-col justify-center"><h3 class="text-4xl font-extrabold text-accent leading-tight">Largest</h3><p class="mt-2 text-base font-medium text-slate-500"> startup pavilion at Disrupt</p></div>
+                <div class="mt-8 sm:mt-12 grid gap-3 sm:gap-4 lg:gap-8 grid-cols-2 lg:grid-cols-5">
+                    <div class="bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-xl text-center flex flex-col justify-center"><p class="text-sm sm:text-base font-semibold text-slate-500">2023</p><h3 class="mt-1 sm:mt-2 text-4xl sm:text-5xl font-extrabold text-accent stat-number" data-target="14">0</h3><p class="mt-1 sm:mt-2 text-sm sm:text-base font-medium text-slate-500">Startups</p></div>
+                    <div class="bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-xl text-center flex flex-col justify-center"><p class="text-sm sm:text-base font-semibold text-slate-500">2024</p><h3 class="mt-1 sm:mt-2 text-4xl sm:text-5xl font-extrabold text-accent stat-number" data-target="24">0</h3><p class="mt-1 sm:mt-2 text-sm sm:text-base font-medium text-slate-500">Startups</p></div>
+                    <div class="bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-xl text-center flex flex-col justify-center"><p class="text-sm sm:text-base font-semibold text-slate-500">2025</p><h3 class="mt-1 sm:mt-2 text-4xl sm:text-5xl font-extrabold text-accent stat-number" data-target="20">0</h3><p class="mt-1 sm:mt-2 text-sm sm:text-base font-medium text-slate-500">Startups</p></div>
+                    <div class="bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-xl text-center flex flex-col justify-center"><h3 class="text-3xl sm:text-4xl font-extrabold text-accent leading-tight">$2B+</h3><p class="mt-1 sm:mt-2 text-sm sm:text-base font-medium text-slate-500">Participants' Total Valuation</p></div>
+                    <div class="col-span-2 lg:col-span-1 bg-slate-100 p-4 sm:p-6 lg:p-8 rounded-xl text-center flex flex-col justify-center"><h3 class="text-3xl sm:text-4xl font-extrabold text-accent leading-tight">Largest</h3><p class="mt-1 sm:mt-2 text-sm sm:text-base font-medium text-slate-500"> startup pavilion at Disrupt</p></div>
                 </div>
             </div>
         </section>
@@ -955,12 +960,12 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
         <!-- Section 15: Final Call to Action & Contacts -->
         <section id="contact" class="py-20 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="bg-slate-800 rounded-2xl p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-slate-800 rounded-2xl p-6 sm:p-8 lg:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <div>
                         <h2 class="text-4xl sm:text-3xl font-extrabold text-white">Ready to Take the Global Stage?</h2>
                         <p class="mt-4 text-lg text-slate-300">Don't miss this opportunity to accelerate your startup's growth. Spots are limited and applications are reviewed on a rolling basis.</p>
                         <p class="mt-4 text-2xl font-bold text-amber-400">Application Deadline: September 15, 2026</p>
-                        <div class="mt-8"><a href="https://forms.gle/wnHzborgYZmCZQBT6" target="_blank" class="cta-button inline-block bg-accent text-white font-extrabold sm:font-bold py-3.5 px-8 sm:py-4 sm:px-10 rounded-lg text-xl sm:text-lg">Apply for the Pavilion</a></div>
+                        <div class="mt-8 text-center md:text-left"><a href="https://forms.gle/wnHzborgYZmCZQBT6" target="_blank" class="cta-button inline-block bg-accent text-white font-extrabold sm:font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-lg whitespace-nowrap">Apply for the Pavilion</a></div>
                     </div>
                     <div class="text-slate-200">
                         <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
