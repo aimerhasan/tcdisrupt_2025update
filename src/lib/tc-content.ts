@@ -970,7 +970,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     <div class="text-slate-200">
                         <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
                         <div class="mt-6 space-y-4">
-                            <a href="mailto:buildunicorns@silkroadinnovationhub.com" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✉️</span> Emailgi</a>
+                            <a href="mailto:buildunicorns@silkroadinnovationhub.com" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✉️</span> Email</a>
                             <a href="https://t.me/nilufar_majidova" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✈️</span> Telegram</a>
                              <div class="flex items-center text-lg text-slate-300 pt-2"><span class="text-2xl mr-3">📍</span> 724 Oak Grove Ave Menlo Park, CA 94025</div>
                         </div>
