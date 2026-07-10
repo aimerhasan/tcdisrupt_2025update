@@ -176,10 +176,10 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     </div>
 
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+                <h1 class="hidden md:block text-4xl md:text-6xl font-extrabold tracking-tight text-white">
                     Showcase Your Startup to the World.
                 </h1>
-                <h2 class="mt-4 text-4xl md:text-6xl font-extrabold tracking-tight text-accent">
+                <h2 class="mt-0 md:mt-4 text-4xl md:text-6xl font-extrabold tracking-tight text-white md:text-accent">
                     Join the Silkroad Pavilion at TechCrunch Disrupt 2026.
                 </h2>
                 <p class="mt-6 max-w-3xl mx-auto text-lg text-white">
@@ -245,7 +245,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
                     <div>
                         <h3 class="text-xl font-bold">
-                            Invitation Letter
+                            visa support
                         </h3>
                         <p class="mt-2 text-gray-500">
                             Accepted startups receive an official invitation letter to support their participation in TechCrunch Disrupt.
@@ -484,100 +484,89 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 </section>
 
 <!-- Section 5: The Offer -->
-<section id="offer" class="relative py-24 overflow-hidden">
+<section id="offer" class="py-16 sm:py-20 bg-slate-50">
 
-    <!-- Background -->
-    <div class="absolute inset-0">
-        <img
-            src="/Images/AV-47.webp"
-            alt="Silkroad Pavilion"
-            class="w-full h-full object-cover">
-
-        <div class="absolute inset-0 bg-slate-900/80"></div>
-    </div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
 
         <!-- Heading -->
         <div class="text-center max-w-3xl mx-auto">
 
-            <p class="uppercase tracking-[0.25em] text-green-400 font-semibold text-sm">
+            <p class="uppercase tracking-[0.25em] text-accent font-semibold text-sm">
                 THE OFFER
             </p>
 
-            <h2 class="mt-4 text-4xl md:text-5xl font-extrabold text-gray-100 leading-tight">
+            <h2 class="mt-4 text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
                 Everything You Need to Exhibit at TechCrunch Disrupt
             </h2>
 
-            <p class="mt-6 text-lg text-slate-300">
-                Silkroad Innovation Hub takes care of the logistics so your team can focus on pitching,
-                networking, meeting investors, and growing internationally.
+            <p class="mt-6 text-lg text-slate-600">
+                For a single investment of US$7,000, Silkroad Innovation Hub takes care of the logistics so your team can focus on pitching, networking, meeting investors, and growing internationally.
             </p>
 
         </div>
 
         <!-- Cards -->
-        <div class="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 mb-12">
+        <div class="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
 
-            <div class="group rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg p-7 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
 
                 <div class="w-14 h-14 rounded-xl bg-green-500 flex items-center justify-center text-2xl text-white">
                     ★
                 </div>
 
-                <h3 class="mt-6 text-xl font-bold text-white">
+                <h3 class="mt-4 text-xl font-bold text-slate-900">
                     Pavilion Booth
                 </h3>
 
-                <p class="mt-3 text-slate-300 leading-7">
+                <p class="mt-2 text-slate-600 leading-6">
                     Receive a professionally managed exhibition space inside the Silkroad Pavilion and stand out to thousands of attendees.
                 </p>
 
             </div>
 
-            <div class="group rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg p-7 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl">
-
-                <div class="w-14 h-14 rounded-xl bg-green-500 flex items-center justify-center text-2xl text-white">
-                    ✈️
-                </div>
-
-                <h3 class="mt-6 text-xl font-bold text-white">
-                    Invitation Letter
-                </h3>
-
-                <p class="mt-3 text-slate-300 leading-7">
-                   Accepted startups receive an official invitation letter to support participation in TechCrunch Disrupt.
-                </p>
-
-            </div>
-
-            <div class="group rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg p-7 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
 
                 <div class="w-14 h-14 rounded-xl bg-green-500 flex items-center justify-center text-2xl text-white">
                     🤝
                 </div>
 
-                <h3 class="mt-6 text-xl font-bold text-white">
+                <h3 class="mt-4 text-xl font-bold text-slate-900">
                     Investor & Media Access
                 </h3>
 
-                <p class="mt-3 text-slate-300 leading-7">
+                <p class="mt-2 text-slate-600 leading-6">
                    Meet investors, media, customers and strategic partners throughout TechCrunch Disrupt.
                 </p>
 
             </div>
 
-           <div class="group rounded-2xl border border-white/10 bg-white/10 backdrop-blur-lg p-7 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+
+                <div class="w-14 h-14 rounded-xl bg-green-500 flex items-center justify-center text-2xl text-white">
+                    🛂
+                </div>
+
+                <h3 class="mt-4 text-xl font-bold text-slate-900">
+                    Visa Support
+                </h3>
+
+                <p class="mt-2 text-slate-600 leading-6">
+                   Accepted startups receive an official invitation letter to support participation in TechCrunch Disrupt.
+                </p>
+
+            </div>
+
+           <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
 
     <div class="w-14 h-14 rounded-xl bg-green-500 flex items-center justify-center text-2xl text-white">
         ✓
     </div>
 
-    <h3 class="mt-6 text-xl font-bold text-white">
+    <h3 class="mt-4 text-xl font-bold text-slate-900">
         Visa Denial Refund
     </h3>
 
-    <p class="mt-3 text-slate-300 leading-7">
+    <p class="mt-2 text-slate-600 leading-6">
         If your U.S. visa application is denied, your participation fee is fully refunded so you can apply with confidence.
     </p>
 
@@ -585,8 +574,17 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
 </div> <!-- End of cards grid -->
 
+<!-- Pricing -->
+<div class="mt-12 text-center">
+
+    <p class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
+        US $7,000
+    </p>
+
+</div>
+
 <!-- CTA -->
-<div class="mt-10 flex justify-center">
+<div class="mt-8 flex justify-center">
 
     <a
         href="https://forms.gle/wnHzborgYZmCZQBT6"
@@ -643,10 +641,12 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-4xl sm:text-3xl font-extrabold text-center text-gray-900">From Founders Like You</h2>
                 <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
-                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-4 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-base sm:text-sm text-gray-500">TrustExam</p></div></div>
-                   <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Yevgeniya Yussupova CEO of NIET.webp" alt="Yevgeniya Yussupova"><p class="mt-4 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-base sm:text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Sherie Spence.webp" alt="Sherie Spence"><p class="mt-4 font-bold text-gray-900">Sherie Spence</p><p class="text-base sm:text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
-                    <div class="testimonial-card rounded-lg p-8 flex flex-col justify-between min-h-[360px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-8 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Ardak Akhmetova.webp" alt="Ardak Akhmetova"><p class="mt-4 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-base sm:text-sm text-gray-500">Global Grand University</p></div></div>
+                   <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-3 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-base sm:text-sm text-gray-500">TrustExam</p></div></div>
+                   <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Yevgeniya Yussupova CEO of NIET.webp" alt="Yevgeniya Yussupova"><p class="mt-3 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-base sm:text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
+                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Sherie Spence.webp" alt="Sherie Spence"><p class="mt-3 font-bold text-gray-900">Sherie Spence</p><p class="text-base sm:text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
+                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Ardak Akhmetova.webp" alt="Ardak Akhmetova"><p class="mt-3 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-base sm:text-sm text-gray-500">Global Grand University</p></div></div>
+                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"The Silkroad Pavilion opened the door to meaningful conversations with founders, investors, and venture capital firms. The team was incredibly supportive throughout the event, and we later raised US$X thanks to the connections we made."</p><div class="mt-6 flex flex-col items-center text-center"><div class="h-24 w-24 rounded-full testimonial-image bg-slate-200 flex items-center justify-center"><svg class="w-12 h-12 text-slate-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div><p class="mt-3 font-bold text-gray-900">Aira</p><p class="text-base sm:text-sm text-gray-500">Company TBD</p></div></div>
+                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">Testimonial coming soon.</p><div class="mt-6 flex flex-col items-center text-center"><div class="h-24 w-24 rounded-full testimonial-image bg-slate-200 flex items-center justify-center"><svg class="w-12 h-12 text-slate-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div><p class="mt-3 font-bold text-gray-900">Name</p><p class="text-base sm:text-sm text-gray-500">Company</p></div></div>
                 </div>
             </div>
         </section>
@@ -970,7 +970,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                     <div class="text-slate-200">
                         <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
                         <div class="mt-6 space-y-4">
-                            <a href="mailto:buildunicorns@silkroadinnovationhub.com" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✉️</span> Email</a>
+                            <a href="mailto:buildunicorns@silkroadinnovationhub.com" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✉️</span> Emailgi</a>
                             <a href="https://t.me/nilufar_majidova" class="flex items-center text-lg text-slate-300 hover:text-white transition"><span class="text-2xl mr-3">✈️</span> Telegram</a>
                              <div class="flex items-center text-lg text-slate-300 pt-2"><span class="text-2xl mr-3">📍</span> 724 Oak Grove Ave Menlo Park, CA 94025</div>
                         </div>
