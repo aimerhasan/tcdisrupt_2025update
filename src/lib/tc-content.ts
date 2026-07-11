@@ -285,7 +285,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
    <div class="mt-8 relative mx-auto max-w-5xl">
 
     <img
-        src="/Images/tcdisrupt_previous final.png"
+        src="/Images/Previous Participants Combined Balanced.png"
         alt="Previous Participants"
         class="w-full">
 
@@ -294,37 +294,37 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
     <a href="https://smartup24.com/main/en"
        target="_blank"
        class="logo-hotspot"
-       style="left:0%; top:4%; width:16%; height:12%;"
+       style="left:0.00%; top:2.21%; width:15.67%; height:5.90%;"
        title="Smartup"></a>
 
     <a href="https://iomete.com"
        target="_blank"
        class="logo-hotspot"
-       style="left:16%; top:4%; width:16%; height:12%;"
+       style="left:16.14%; top:1.07%; width:16.67%; height:7.51%;"
        title="IOMETE"></a>
 
     <a href="https://arlanbiotech.com"
        target="_blank"
        class="logo-hotspot"
-       style="left:34%; top:4%; width:16%; height:12%;"
+       style="left:33.96%; top:0.66%; width:14.79%; height:8.22%;"
        title="Arlan Biotech"></a>
 
     <a href="https://www.datagaze.uz/"
        target="_blank"
        class="logo-hotspot"
-       style="left:53.5%; top:0%; width:10%; height:15%;"
+       style="left:54.75%; top:0.00%; width:7.68%; height:11.32%;"
        title="Company"></a>
 
     <a href="https://www.tryalma.com/"
        target="_blank"
        class="logo-hotspot"
-       style="left:68%; top:4%; width:15%; height:12%;"
+       style="left:67.29%; top:0.83%; width:15.99%; height:7.75%;"
        title="Alma"></a>
 
     <a href="https://billz.io/"
        target="_blank"
        class="logo-hotspot"
-       style="left:85%; top:4%; width:15%; height:12%;"
+       style="left:83.91%; top:1.43%; width:16.09%; height:6.79%;"
        title="Billz"></a>
 
        <!-- SECOND ROW -->
@@ -332,37 +332,37 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://adviad.com/"
    target="_blank"
    class="logo-hotspot"
-   style="left:1%; top:21%; width:16%; height:13%;"
+   style="left:0.00%; top:13.29%; width:15.78%; height:7.57%;"
    title="Adviad"></a>
 
 <a href="INSERT_GRAND_LINK"
    target="_blank"
    class="logo-hotspot"
-   style="left:18%; top:20%; width:13%; height:14%;"
+   style="left:19.28%; top:11.32%; width:10.29%; height:11.50%;"
    title="Grand"></a>
 
 <a href="https://blog.bult.ai/"
    target="_blank"
    class="logo-hotspot"
-   style="left:33%; top:19%; width:18%; height:15%;"
+   style="left:34.22%; top:12.69%; width:14.26%; height:8.58%;"
    title="Built"></a>
 
 <a href="https://dosty.co/"
    target="_blank"
    class="logo-hotspot"
-   style="left:51%; top:20%; width:16%; height:13%;"
+   style="left:50.31%; top:13.35%; width:16.30%; height:7.63%;"
    title="Dosty"></a>
 
 <a href="https://chatfuel.com/"
    target="_blank"
    class="logo-hotspot"
-   style="left:69%; top:18%; width:12%; height:16%;"
+   style="left:70.17%; top:11.32%; width:10.34%; height:11.56%;"
    title="Chatfuel"></a>
 
 <a href="https://geomotive.io/?lang=en"
    target="_blank"
    class="logo-hotspot"
-   style="left:85%; top:20%; width:15%; height:13%;"
+   style="left:83.96%; top:13.35%; width:16.04%; height:7.57%;"
    title="Geomotive"></a>
 
    <!-- THIRD ROW -->
@@ -370,37 +370,37 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://uzumbank.uz/"
    target="_blank"
    class="logo-hotspot"
-   style="left:1%; top:39%; width:16%; height:13%;"
+   style="left:0.00%; top:25.39%; width:15.78%; height:7.27%;"
    title="Uzum"></a>
 
 <a href="https://www.linkedin.com/company/forest-hero/?originalSubdomain=kz"
    target="_blank"
    class="logo-hotspot"
-   style="left:18%; top:38%; width:15%; height:14%;"
+   style="left:16.98%; top:25.33%; width:15.36%; height:8.05%;"
    title="Forest Hero"></a>
 
 <a href="https://parqour.ai"
    target="_blank"
    class="logo-hotspot"
-   style="left:34%; top:39%; width:17%; height:13%;"
+   style="left:32.71%; top:26.10%; width:17.22%; height:6.79%;"
    title="Parqour"></a>
 
 <a href="https://receptapp.com/"
    target="_blank"
    class="logo-hotspot"
-   style="left:50%; top:39%; width:16%; height:13%;"
+   style="left:50.03%; top:26.04%; width:16.77%; height:6.02%;"
    title="Recepta"></a>
 
 <a href="https://uzinfocom.uz/"
    target="_blank"
    class="logo-hotspot"
-   style="left:67%; top:39%; width:16%; height:13%;"
+   style="left:66.90%; top:26.46%; width:17.11%; height:5.90%;"
    title="Uzinfocom"></a>
 
 <a href="https://pointai.co/"
    target="_blank"
    class="logo-hotspot"
-   style="left:86%; top:39%; width:13%; height:13%;"
+   style="left:84.22%; top:26.22%; width:15.78%; height:6.20%;"
    title="PointAI"></a>
 
    <!-- FOURTH ROW -->
@@ -408,37 +408,37 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://call24.com/"
    target="_blank"
    class="logo-hotspot"
-   style="left:1%; top:58%; width:15%; height:14%;"
+   style="left:0.21%; top:36.95%; width:14.52%; height:8.40%;"
    title="Call24"></a>
 
 <a href="https://trustexam.ai/"
    target="_blank"
    class="logo-hotspot"
-   style="left:17%; top:58%; width:15%; height:14%;"
+   style="left:15.67%; top:38.38%; width:17.37%; height:5.96%;"
    title="TrustExam"></a>
 
 <a href="https://astanahub.com/en/article/kazakhstanskii-pwron-ai-stal-tekhnologicheskim-partnerom-bi-group-i-vyshel-na-rynok-ssha"
    target="_blank"
    class="logo-hotspot"
-   style="left:34%; top:58%; width:15%; height:14%;"
+   style="left:33.15%; top:38.62%; width:17.11%; height:6.26%;"
    title="pwron.ai"></a>
 
 <a href="https://tilmoch.ai/en/"
    target="_blank"
    class="logo-hotspot"
-   style="left:52%; top:58%; width:17%; height:14%;"
+   style="left:50.84%; top:38.32%; width:18.91%; height:6.85%;"
    title="Tilmoch"></a>
 
 <a href="https://polygraf.ai/"
    target="_blank"
    class="logo-hotspot"
-   style="left:71%; top:56%; width:11%; height:17%;"
+   style="left:70.38%; top:35.16%; width:9.87%; height:12.22%;"
    title="Polygraf"></a>
 
 <a href="https://call2action.ai/"
    target="_blank"
    class="logo-hotspot"
-   style="left:84.5%; top:58%; width:15.5%; height:14%;"
+   style="left:82.60%; top:38.02%; width:17.40%; height:7.03%;"
    title="Call2Action"></a>
 
    <!-- FIFTH ROW -->
@@ -446,38 +446,140 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://workly.io/en"
    target="_blank"
    class="logo-hotspot"
-   style="left:1%; top:77%; width:16%; height:14%;"
+   style="left:0.00%; top:50.36%; width:15.07%; height:7.03%;"
    title="Workly"></a>
 
 <a href="https://rhinotales.com/"
    target="_blank"
    class="logo-hotspot"
-   style="left:18%; top:77%; width:16%; height:14%;"
+   style="left:15.18%; top:50.95%; width:18.10%; height:5.96%;"
    title="RhinoTales"></a>
 
 <a href="https://kscooters.com/"
    target="_blank"
    class="logo-hotspot"
-   style="left:35%; top:77%; width:15%; height:14%;"
+   style="left:33.33%; top:50.77%; width:16.25%; height:6.50%;"
    title="kScooter"></a>
 
 <a href="https://iman.uz/en"
    target="_blank"
    class="logo-hotspot"
-   style="left:51%; top:76%; width:17%; height:15%;"
+   style="left:50.31%; top:49.58%; width:14.89%; height:8.16%;"
    title="IMAN"></a>
 
 <a href="https://mohirdev.uz/"
    target="_blank"
    class="logo-hotspot"
-   style="left:69%; top:77%; width:15%; height:14%;"
+   style="left:69.23%; top:48.27%; width:12.12%; height:10.01%;"
    title="Mohirdev"></a>
 
 <a href="https://www.citix.me/"
    target="_blank"
    class="logo-hotspot"
-   style="left:85%; top:74%; width:14%; height:18%;"
+   style="left:87.25%; top:47.56%; width:10.29%; height:11.50%;"
    title="Citix"></a>
+
+   <!-- SIXTH ROW (newly added) -->
+
+<a href="INSERT_LINK_HERE"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:2.30%; top:60.13%; width:10.29%; height:11.56%;"
+   title="Company"></a>
+
+<a href="https://bazarmarkt.com/en/"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:17.24%; top:61.68%; width:14.26%; height:8.40%;"
+   title="Bazar Market"></a>
+
+<a href="https://businessrobots.ai/"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:35.11%; top:61.26%; width:12.54%; height:9.42%;"
+   title="Business Robots AI"></a>
+
+<a href="https://niet.kz/en"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:52.25%; top:61.14%; width:12.33%; height:9.54%;"
+   title="NIET Charitable Foundation"></a>
+
+<a href="https://paylov.uz/"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:68.70%; top:62.46%; width:13.27%; height:6.85%;"
+   title="Paylov"></a>
+
+<a href="https://hemolabs-tech.lovable.app/"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:86.05%; top:61.20%; width:12.54%; height:9.36%;"
+   title="Hemo.Labs"></a>
+
+   <!-- SEVENTH ROW (newly added) -->
+
+<a href="https://investbanq.com"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:2.25%; top:72.29%; width:10.34%; height:11.56%;"
+   title="investbanq"></a>
+
+<a href="https://www.algebras.ai/"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:19.33%; top:72.23%; width:10.19%; height:11.74%;"
+   title="Company"></a>
+
+<a href="https://qtwin.kazscanservice.com"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:36.05%; top:72.53%; width:10.76%; height:11.03%;"
+   title="Q-Twin"></a>
+
+<a href="https://rette.ai"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:53.24%; top:72.29%; width:10.34%; height:11.56%;"
+   title="Company"></a>
+
+<a href="https://www.surfaice.pro"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:70.17%; top:72.29%; width:10.34%; height:11.56%;"
+   title="Company"></a>
+
+<a href="https://topcoachuni.com"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:88.24%; top:71.51%; width:8.20%; height:13.05%;"
+   title="Top Coach"></a>
+
+   <!-- EIGHTH ROW (newly added) -->
+
+<a href="https://brightfuture.kz/"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:19.23%; top:84.62%; width:10.40%; height:11.44%;"
+   title="Bright Future"></a>
+
+<a href="https://dtvsoft.com"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:32.29%; top:86.71%; width:18.23%; height:7.09%;"
+   title="DTV Soft"></a>
+
+<a href="https://play.google.com/store/apps/details?id=uz.globalmove.littlechess"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:52.66%; top:85.10%; width:11.34%; height:10.43%;"
+   title="Little Chess"></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.umaylab.aika&hl=en_US"
+   target="_blank"
+   class="logo-hotspot"
+   style="left:70.95%; top:84.21%; width:9.82%; height:12.22%;"
+   title="Aika"></a>
 
 </div>
 </div>
@@ -578,7 +680,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <div class="mt-12 text-center">
 
     <p class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-        US $7,000
+        $7,000
     </p>
 
 </div>
@@ -645,7 +747,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Yevgeniya Yussupova CEO of NIET.webp" alt="Yevgeniya Yussupova"><p class="mt-3 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-base sm:text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
                     <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Sherie Spence.webp" alt="Sherie Spence"><p class="mt-3 font-bold text-gray-900">Sherie Spence</p><p class="text-base sm:text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
                     <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Ardak Akhmetova.webp" alt="Ardak Akhmetova"><p class="mt-3 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-base sm:text-sm text-gray-500">Global Grand University</p></div></div>
-                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"The Silkroad Pavilion opened the door to meaningful conversations with founders, investors, and venture capital firms. The team was incredibly supportive throughout the event, and we later raised US$X thanks to the connections we made."</p><div class="mt-6 flex flex-col items-center text-center"><div class="h-24 w-24 rounded-full testimonial-image bg-slate-200 flex items-center justify-center"><svg class="w-12 h-12 text-slate-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div><p class="mt-3 font-bold text-gray-900">Aira</p><p class="text-base sm:text-sm text-gray-500">Company TBD</p></div></div>
+                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"Participating in the Silkroad TechCrunch Pavilion was a golden opportunity — we made over 300 high-level connections and met with numerous VCs we'd otherwise have spent months trying to reach."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Aira mongush.png" alt="Aira"><p class="mt-3 font-bold text-gray-900">Aira</p><p class="text-base sm:text-sm text-gray-500">Company TBD</p></div></div>
                     <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">Testimonial coming soon.</p><div class="mt-6 flex flex-col items-center text-center"><div class="h-24 w-24 rounded-full testimonial-image bg-slate-200 flex items-center justify-center"><svg class="w-12 h-12 text-slate-400" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2c-3.33 0-10 1.67-10 5v3h20v-3c0-3.33-6.67-5-10-5z"/></svg></div><p class="mt-3 font-bold text-gray-900">Name</p><p class="text-base sm:text-sm text-gray-500">Company</p></div></div>
                 </div>
             </div>
