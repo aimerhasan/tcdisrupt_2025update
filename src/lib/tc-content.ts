@@ -285,7 +285,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
    <div class="mt-8 relative mx-auto max-w-5xl">
 
     <img
-        src="/Images/Previous Participants Combined Balanced.png"
+        src="/Images/Previous Participants Combined Balanced v2.png"
         alt="Previous Participants"
         class="w-full">
 
@@ -522,7 +522,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://investbanq.com"
    target="_blank"
    class="logo-hotspot"
-   style="left:2.25%; top:72.29%; width:10.34%; height:11.56%;"
+   style="left:0.52%; top:75.75%; width:13.80%; height:4.65%;"
    title="investbanq"></a>
 
 <a href="https://www.algebras.ai/"
@@ -540,13 +540,13 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <a href="https://rette.ai"
    target="_blank"
    class="logo-hotspot"
-   style="left:53.24%; top:72.29%; width:10.34%; height:11.56%;"
+   style="left:51.20%; top:74.43%; width:14.42%; height:7.27%;"
    title="Company"></a>
 
 <a href="https://www.surfaice.pro"
    target="_blank"
    class="logo-hotspot"
-   style="left:70.17%; top:72.29%; width:10.34%; height:11.56%;"
+   style="left:66.35%; top:75.03%; width:17.97%; height:6.08%;"
    title="Company"></a>
 
 <a href="https://topcoachuni.com"
