@@ -1067,7 +1067,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                         <h2 class="text-4xl sm:text-3xl font-extrabold text-white">Ready to Take the Global Stage?</h2>
                         <p class="mt-4 text-lg text-slate-300">Don't miss this opportunity to accelerate your startup's growth. Spots are limited and applications are reviewed on a rolling basis.</p>
                         <p class="mt-4 text-2xl font-bold text-amber-400">Application Deadline: September 15, 2026</p>
-                        <div class="mt-8 text-center md:text-left"><a href="https://forms.gle/wnHzborgYZmCZQBT6" target="_blank" class="cta-button inline-block bg-accent text-white font-extrabold sm:font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-lg whitespace-nowrap">Apply for the Pavilion</a></div>
+                        <div class="mt-8 text-center md:text-left"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeB3Edcdt6u2oTfZfswffR0SAkRgTiVrGD_VwZF5QhnhasFrg/viewform" target="_blank" class="cta-button inline-block bg-accent text-white font-extrabold sm:font-bold py-3 px-6 sm:py-4 sm:px-10 rounded-lg text-lg whitespace-nowrap">Apply for the Pavilion</a></div>
                     </div>
                     <div class="text-slate-200">
                         <h3 class="text-2xl font-bold text-white">Get in Touch</h3>
