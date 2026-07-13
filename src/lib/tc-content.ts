@@ -245,7 +245,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 
                     <div>
                         <h3 class="text-xl font-bold">
-                            visa support
+                            Visa support
                         </h3>
                         <p class="mt-2 text-gray-500">
                             Accepted startups receive an official invitation letter to support their participation in TechCrunch Disrupt.
@@ -689,7 +689,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
 <div class="mt-8 flex justify-center">
 
     <a
-        href="https://forms.gle/wnHzborgYZmCZQBT6"
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeB3Edcdt6u2oTfZfswffR0SAkRgTiVrGD_VwZF5QhnhasFrg/viewform"
         target="_blank"
         class="inline-flex items-center justify-center rounded-xl bg-green-500 hover:bg-green-600 px-10 py-4 text-lg font-bold text-white shadow-xl transition-all duration-300 hover:-translate-y-1">
         Secure Your Spot
@@ -744,7 +744,7 @@ export const SITE_BODY = `<!-- Section 1: Header & Navigation -->
                 <h2 class="text-4xl sm:text-3xl font-extrabold text-center text-gray-900">From Founders Like You</h2>
                 <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2">
                    <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"It was a great opportunity to introduce our product to the US market and to find valuable connections for further development."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="https://utfs.io/f/5lAbzPMR2hDElSw4NoIgs2k8H4n6bZAKdexXuTECwihprfQJ" alt="Nurali Sarbakysh"><p class="mt-3 font-bold text-gray-900">Nurali Sarbakysh</p><p class="text-base sm:text-sm text-gray-500">TrustExam</p></div></div>
-                   <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Yevgeniya Yussupova CEO of NIET.webp" alt="Yevgeniya Yussupova"><p class="mt-3 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-base sm:text-sm text-gray-500">CEO of NIET Charitable Foundation</p></div></div>
+                   <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"We have achieved a lot: we are now in talks with multiple potential partners, received media coverage, discovered new global platforms where foundations can register and receive corporate donations, learned how U.S. nonprofits operate, and got valuable advice from the community."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Yevgeniya Yussupova CEO of NIET.webp" alt="Yevgeniya Yussupova"><p class="mt-3 font-bold text-gray-900">Yevgeniya Yussupova</p><p class="text-base sm:text-sm text-gray-500">NIET Foundation</p></div></div>
                     <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">“Delighted that the team and startups had a great time! We always enjoy having the SilkRoad Innovation Hub at Disrupt.”</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Sherie Spence.webp" alt="Sherie Spence"><p class="mt-3 font-bold text-gray-900">Sherie Spence</p><p class="text-base sm:text-sm text-gray-500">TechCrunch Disrupt</p></div></div>
                     <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"Participating in the Silkroad Pavilion was a fantastic experience. I enjoyed it immensely, thanks to the entire team who made it seamless. It was the perfect entry into the global tech scene."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Ardak Akhmetova.webp" alt="Ardak Akhmetova"><p class="mt-3 font-bold text-gray-900">Ardak Akhmetova</p><p class="text-base sm:text-sm text-gray-500">Global Grand University</p></div></div>
                     <div class="testimonial-card rounded-lg p-6 flex flex-col justify-between min-h-[310px]"><p class="text-gray-600">"Participating in the Silkroad TechCrunch Pavilion was a golden opportunity — we made over 300 high-level connections and met with numerous VCs we'd otherwise have spent months trying to reach."</p><div class="mt-6 flex flex-col items-center text-center"><img class="h-24 w-24 rounded-full testimonial-image" src="/Images/Aira mongush.png" alt="Aira Mongush"><p class="mt-3 font-bold text-gray-900">Aira Mongush</p><p class="text-base sm:text-sm text-gray-500">Algebras AI</p></div></div>
